@@ -1,12 +1,22 @@
 import { defineConfig } from 'vite'
 import react from '@vitejs/plugin-react'
+import path from 'path'
 
 export default defineConfig({
   plugins: [react()],
+  root: path.resolve(__dirname, 'src'),
+  publicDir: path.resolve(__dirname, 'src/assets'),
   build: {
-    outDir: 'dist',
+    outDir: '../dist',
+    emptyOutDir: true,
     rollupOptions: {
-      input: '/app/index.html'  // Caminho explícito
+      input: path.resolve(__dirname, 'src/index.html'),
+      external: ['/src/main.jsx'] // Remove esta linha se causar problemas
+    }
+  },
+  resolve: {
+    alias: {
+      '@': path.resolve(__dirname, 'src')
     }
   }
 })
