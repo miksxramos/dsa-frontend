@@ -5,13 +5,16 @@ import path from 'path'
 export default defineConfig({
   plugins: [react()],
   root: path.resolve(__dirname, 'src'),
-  publicDir: path.resolve(__dirname, 'src/assets'),
   build: {
     outDir: '../dist',
-    emptyOutDir: true,
-    rollupOptions: {
-      input: path.resolve(__dirname, 'src/index.html'),
-      external: ['/src/main.jsx'] // Remove esta linha se causar problemas
+    emptyOutDir: true
+  },
+  css: {
+    preprocessorOptions: {
+      scss: {
+        quietDeps: true,
+        includePaths: ['node_modules']
+      }
     }
   },
   resolve: {

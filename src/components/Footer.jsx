@@ -1,9 +1,19 @@
-import styles from './Footer.module.css';
+import React from 'react';
 
-export default function Footer() {
-  return (
-    <footer className={styles.footer}>
-      <p>© 2024 DSA Frontend</p>
-    </footer>
-  );
-}
+const Footer = () => (
+  <footer className="bg-dark text-white py-4 mt-auto">
+    <div className="container">
+      <div className="row">
+        <div className="col-md-6">
+          <h5>Contato</h5>
+          <p>email@exemplo.com</p>
+        </div>
+        <div className="col-md-6 text-md-end">
+          <p className="mb-0">&copy; {new Date().getFullYear()} Meu Site. Todos os direitos reservados.</p>
+        </div>
+      </div>
+    </div>
+  </footer>
+);
+
+export default Footer;
