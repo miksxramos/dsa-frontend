@@ -22,17 +22,3 @@ function App() {
   );
 }
 export default App;
-
-
-// export default function App() {
-//   return (
-//     <Router>
-//       <Header />
-//       <Navbar />
-//       <Routes>
-//         <Route path="/" element={<Home />} />
-//       </Routes>
-//       <Footer />
-//     </Router>
-//   );
-// }
