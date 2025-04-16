@@ -6,13 +6,12 @@ services:
     ports:
       - "80:80"
     restart: unless-stopped
-#     networks:
-#       - mynetwork
+    networks:
+      - dsa-network
 
-# networks:
-#   mynetwork:
-#     driver: bridge
+networks:
+  dsa-network:
+    driver: bridge
 
-
-# volumes:
-#   db_data:
+volumes:
+  db_data:
