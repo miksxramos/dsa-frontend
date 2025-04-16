@@ -14,13 +14,13 @@
 
 1. Clone este repositório em sua máquina usando o seguinte comando:
 ```bash
-git clone git@github.com:holding-eficiencia/dimce-back.git
+git clone git@github.com:StorThiago/dsa-frontend.git
 ```
 
 
 2. Entre no repositório clonado
 ```bash
-cd dsa-back/
+cd dsa-frontend/
 ```
 
 
