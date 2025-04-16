@@ -1,8 +1,18 @@
 {
   "name": "dsa-frontend",
+  "version": "1.0.0",
   "private": true,
-  "version": "0.0.0",
   "type": "module",
+  "description": "Frontend application with React, Vite and Bootstrap",
+  "keywords": ["react", "vite", "bootstrap", "nginx", "docker"],
+  "author": "Thiago Pontes <tbpsa@iscte-iul.pt>",
+  "contributors": [
+    {
+      "name": "João Matos",
+      "email": "joao@bklyn.co"
+    }
+  ],
+  "license": "MIT",
   "scripts": {
     "dev": "vite",
     "build": "vite build",
