@@ -1,13 +1,9 @@
-import React, { useEffect, useState } from 'react';
+import React, { useEffect, useContext } from 'react';
 import Sidebar from '../components/Sidebar';
+import { UserContext } from '../context/UserContext';
 
 const Home = () => {
-  const [userData, setUserData] = useState({
-    name: '',
-    email: '',
-    tipo: '',
-  });
-  const [token, setToken] = useState('');
+  const { userData, setUserData } = useContext(UserContext);
 
   useEffect(() => {
     const login = async () => {
@@ -26,22 +22,20 @@ const Home = () => {
         const data = await response.json();
         console.log('Login response:', data);
 
-        // Atualiza os dados do usuário
+        // Atualiza os dados do usuário no contexto global
         setUserData({
           name: data.user.name,
           email: data.user.email,
           tipo: data.user.tipo,
         });
 
-        // Atualiza o token
-        setToken(data.token);
       } catch (error) {
         console.error('Erro ao fazer login:', error);
       }
     };
 
     login();
-  }, []);
+  }, [setUserData]);
 
   return (
     <div className="d-flex flex-column min-vh-100">
@@ -57,7 +51,6 @@ const Home = () => {
                 Olá {userData.name || '...'}, seu email é {userData.email || '...'} e tens permissão de {userData.tipo || '...'}
               </p>
             </section>
-
           </main>
         </div>
       </div>
