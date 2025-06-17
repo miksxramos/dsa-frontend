@@ -22,7 +22,7 @@ const Perfil = () => {
           </Col>
 
           <Col md={9}>
-            <h3 className="mb-1">Thiago</h3>
+            <h3 className="mb-1">Guilherme</h3>
             <p className="mb-2 text-muted">Modalidade: <strong>Futebol</strong></p>
             <p className="mb-0">Nível: <strong>Intermediário</strong></p>
           </Col>

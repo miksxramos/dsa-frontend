@@ -23,7 +23,7 @@ function App() {
   const [userData, setUserData] = useState({ name: '', email: '', tipo: '' }); // 🆕 Add this state
 
   return (
-    <UserContext.Provider value={{ userData, setUserData }}> {/* 🆕 Wrap everything */}
+    <UserContext.Provider value={{ userData, setUserData }}> {}
       <Router>
         <Header />
         <Navbar />
@@ -39,7 +39,8 @@ function App() {
           <Route path="/admin" element={<Admin />} />
         </Routes>
         <Footer />
-      </Router>
+        </Router>
+      
     </UserContext.Provider>
   );
 }

@@ -6,10 +6,10 @@ const Footer = () => (
       <div className="row">
         <div className="col-md-6">
           <h5>Contato</h5>
-          <p>email@exemplo.com</p>
+          <p>gameon@gmail.com</p>
         </div>
         <div className="col-md-6 text-md-end">
-          <p className="mb-0">&copy; {new Date().getFullYear()} Meu Site. Todos os direitos reservados.</p>
+          <p className="mb-0">&copy; {new Date().getFullYear()} Game On</p>
         </div>
       </div>
     </div>
