@@ -3,7 +3,7 @@ import { Card, Button } from 'react-bootstrap';
 
 const Matchmaking = () => (
   <div className="text-center p-4">
-    <h2>Encontre Companheiros</h2>
+    <h2>Encontre Jogadores</h2>
     <Card className="mx-auto" style={{ width: '18rem' }}>
       <Card.Img variant="top" src="placeholder-user.jpg" />
       <Card.Body>
